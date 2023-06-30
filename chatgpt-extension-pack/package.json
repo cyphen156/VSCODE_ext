@@ -13,10 +13,31 @@
   "activationEvents": [],
   "main": "./out/extension.js",
   "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+          {
+              "id": "chatgpt",
+              "title": "ChatGPT",
+              "icon": "media/icon.svg"
+          }
+      ]
+    },
+    "views": {
+        "chatgpt": [
+            {
+                "id": "chat",
+                "name": "Chat"
+            }
+        ]
+    },
     "commands": [
       {
         "command": "chatgpt-extension-pack.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "chatgpt-extension-pack.openWebview",
+        "title": "openWebview"
       }
     ]
   },
